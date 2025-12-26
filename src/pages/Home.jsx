@@ -17,7 +17,7 @@ export default function Home() {
 
                     <Link to="/fridge" className="main-btn">Открыть холодильник →</Link>
 
-                    <div className="subtext">Добавить продукты</div>
+                    <Link to="/add" className="subtext">Добавить продукты</Link>
                 </section>
             </div>
         </>
