@@ -1,0 +1,78 @@
+/* ФОН */
+.add-page {
+    height: 91.4vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle at top left,
+            #b28cb8,
+            #c7c3cfad,
+            #c887cc);
+}
+
+
+.plus-card {
+    width: 350px;
+    height: 350px;
+    border-radius: 36px;
+    margin-bottom: 70px;
+    background: rgba(0, 0, 0, 0.18);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    box-shadow:
+        0 30px 80px rgba(226, 213, 213, 0.25),
+        inset 0 0 0 1px rgba(195, 188, 188, 0.133);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+
+.plus-card:hover {
+    transform: translateY(-6px) scale(1.04);
+}
+
+.plus-card:active {
+    transform: scale(0.96);
+}
+
+
+.plus {
+    font-size: 200px;
+    font-weight: 200;
+    color: rgb(255, 255, 255);
+    line-height: 1;
+}
+
+
+.text {
+    color: rgba(244, 235, 235, 0.9);
+    font-size: 25px;
+    letter-spacing: 0.5px;
+}
+
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 30px 80px rgba(80, 25, 25, 0.25);
+    }
+
+    50% {
+        box-shadow: 0 40px 120px rgba(0, 0, 0, 0.35);
+    }
+
+    100% {
+        box-shadow: 0 30px 80px rgba(0, 0, 0, 0.25);
+    }
+}
+
+.plus-card {
+    animation: pulse 4s ease-in-out infinite;
+}

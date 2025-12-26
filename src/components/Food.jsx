@@ -12,7 +12,7 @@ export default function Food() {
             <nav className="nav">
                 <Link to="/">Главная</Link>
                 <Link to="/fridge">Мой холодильник</Link>
-                <a href="#">Добавить</a>
+                <Link to="/add">Добавить</Link>
                 <Link to="/recipes">Рецепты</Link>
                 <Link to="/chat">Чат</Link>
             </nav>
