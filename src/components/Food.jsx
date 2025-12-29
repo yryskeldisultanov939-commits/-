@@ -22,7 +22,7 @@ export default function Food() {
                 <Link to="/">Главная</Link>
                 <Link to="/fridge">Мой холодильник</Link>
                 <Link to="/add">Добавить</Link>
-                <Link to="/recipes">Рецепты</Link>
+                <Link to="/resept">Рецепты</Link>
                 <Link to="/chat">Чат</Link>
             </nav>
 

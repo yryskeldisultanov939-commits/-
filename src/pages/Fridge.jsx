@@ -1,6 +1,9 @@
+import { useNavigate } from 'react-router-dom'; 
 import '../css/Fridge.css';
+import { Link } from 'react-router-dom';
 
 export default function Fridge() {
+    const navigate = useNavigate();
     return (
         <div className="app">
             <div className="container">
@@ -54,13 +57,12 @@ export default function Fridge() {
                         </div>
                     </div>
 
-                    <button className="btn">
-                        Сгенерировать рецепты →
-                    </button>
+                    
+                        <Link to="/resept" className="btn1">Сгенерировать рецепты →</Link>
+                    
                     <p className="note">Нажмите кнопку, чтобы увидеть идеи</p>
                 </div>
 
-                {/* РЕЦЕПТЫ */}
                 <div className="card">
                     <h2 className="title">Что приготовить</h2>
 
@@ -79,7 +81,7 @@ export default function Fridge() {
                         <span className="time">10 мин</span>
                     </div>
 
-                    <button className="btn">
+                    <button className="btn2" onClick={() => navigate(0)}>
                         Сгенерировать новые →
                     </button>
                     <p className="hint">Нажмите на рецепт для пошагового плана</p>

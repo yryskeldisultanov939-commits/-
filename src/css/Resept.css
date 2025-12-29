@@ -1,4 +1,4 @@
-/* Fridge.css */
+
 * {
     box-sizing: border-box;
     font-family: "Inter", sans-serif;
@@ -160,35 +160,8 @@ body {
     color: #b0b0b0;
 }
 
-
-.btn1 {
-    width: calc(115% - 40px); 
-    height: auto;           
-    margin-top: 10px;
-    padding: 16px 32px;     
-    border-radius: 18px;
-    border: none;
-    text-decoration: none;
-    background: linear-gradient(135deg, #7b61ff, #9b7bff);
-    color: #fff;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-    box-shadow: 0 10px 20px rgba(123, 97, 255, 0.25);
-    transition: 0.3s;
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-.btn1:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 15px 25px rgba(123, 97, 255, 0.35);
-    filter: brightness(1.1);
-}
-.btn2 {
+/* КНОПКА */
+.btn {
     width: 100%;
     margin-top: 10px;
     padding: 16px;
@@ -204,6 +177,10 @@ body {
     transition: 0.3s;
 }
 
+.btn:hover {
+    box-shadow: 0 15px 25px rgba(123, 97, 255, 0.35);
+    transform: translateY(-1px);
+}
 
 .note, .hint {
     margin-top: 16px;
@@ -212,3 +189,33 @@ body {
     text-align: center;
 }
 
+
+.recipe-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 15px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    border: 1px solid rgba(123, 97, 255, 0.1);
+}
+
+.step-num {
+    background: #7b61ff;
+    color: white;
+    min-width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.recipe-step p {
+    margin: 0;
+    color: #444;
+    line-height: 1.5;
+}

@@ -1,56 +1,62 @@
-/* ФОН */
 .add-page {
-    height: 91.4vh;
+    min-height: 91.4vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: radial-gradient(circle at top left,
-            #b28cb8,
-            #c7c3cfad,
-            #c887cc);
+    background: radial-gradient(circle at top left, #ccb3cf, #6e5a97ad, #fffaff);
+    padding: 20px;
 }
 
+.container-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+}
 
 .plus-card {
     width: 350px;
     height: 350px;
     border-radius: 36px;
-    margin-bottom: 70px;
     background: rgba(0, 0, 0, 0.18);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-
-    box-shadow:
-        0 30px 80px rgba(226, 213, 213, 0.25),
+    box-shadow: 0 30px 80px rgba(226, 213, 213, 0.25),
         inset 0 0 0 1px rgba(195, 188, 188, 0.133);
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 25px;
-
     cursor: pointer;
     transition: 0.25s ease;
+    animation: pulse 4s ease-in-out infinite;
+    /* */
 }
 
-
-.plus-card:hover {
+.plus-card:hover:not(.disabled) {
     transform: translateY(-6px) scale(1.04);
 }
 
-.plus-card:active {
+.plus-card:active:not(.disabled) {
     transform: scale(0.96);
 }
 
+.plus-card.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    animation: none;
+}
 
 .plus {
-    font-size: 200px;
+    font-size: 150px;
+    /* Уменьшил немного, чтобы текст влезал лучше */
     font-weight: 200;
     color: rgb(255, 255, 255);
     line-height: 1;
 }
-
 
 .text {
     color: rgba(244, 235, 235, 0.9);
@@ -58,7 +64,63 @@
     letter-spacing: 0.5px;
 }
 
+.counter {
+    color: white;
+    font-size: 14px;
+    opacity: 0.7;
+}
 
+.receipts-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.receipt-preview-card {
+    width: 300px;
+    height: 320px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: visible;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.receipt-img {
+    width: 108%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 12px;
+    display: block;
+}
+
+.remove-btn {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 28px;
+    height: 28px;
+    background: #ff4b4b;
+    color: white;
+    border: 2px solid white;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+.remove-btn:hover {
+    background: #e04343;
+}
 @keyframes pulse {
     0% {
         box-shadow: 0 30px 80px rgba(80, 25, 25, 0.25);
@@ -71,8 +133,4 @@
     100% {
         box-shadow: 0 30px 80px rgba(0, 0, 0, 0.25);
     }
-}
-
-.plus-card {
-    animation: pulse 4s ease-in-out infinite;
 }
