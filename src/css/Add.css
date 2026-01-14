@@ -1,39 +1,29 @@
-.add-page {
-    min-height: 91.4vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: radial-gradient(circle at top left, #ccb3cf, #6e5a97ad, #fffaff);
-    padding: 20px;
-}
-
 .container-wrapper {
     display: flex;
-    flex-direction: column;
-    gap: 30px;
-    align-items: center;
-    max-width: 1200px;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 20px;
     width: 100%;
+    max-width: 1300px;
+    margin: 0 auto 0 auto;
 }
 
 .plus-card {
-    width: 350px;
-    height: 350px;
+    width: 180px;
+    height: 40px;
     border-radius: 36px;
-    background: rgba(0, 0, 0, 0.18);
+    background: rgba(67, 46, 224, 0.756);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    box-shadow: 0 30px 80px rgba(226, 213, 213, 0.25),
+    box-shadow: 0 30px 80px rgba(121, 35, 35, 0.25),
         inset 0 0 0 1px rgba(195, 188, 188, 0.133);
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    gap: 25px;
     cursor: pointer;
+    gap: 10px;
     transition: 0.25s ease;
     animation: pulse 4s ease-in-out infinite;
-    /* */
 }
 
 .plus-card:hover:not(.disabled) {
@@ -51,20 +41,22 @@
 }
 
 .plus {
-    font-size: 150px;
-    /* Уменьшил немного, чтобы текст влезал лучше */
-    font-weight: 200;
+    font-size: 50px;
+    font-weight: 10;
     color: rgb(255, 255, 255);
     line-height: 1;
+    margin-top: -4px;
 }
 
 .text {
+    margin-top: 10px;
     color: rgba(244, 235, 235, 0.9);
-    font-size: 25px;
+    font-size: 16px;
     letter-spacing: 0.5px;
 }
 
 .counter {
+
     color: white;
     font-size: 14px;
     opacity: 0.7;
@@ -74,7 +66,10 @@
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    justify-content: center;
+    flex-grow: 1;
+    /* Список займет все свободное место слева */
+    justify-content: flex-end;
+    /* Карточки будут прижиматься к кнопке */
 }
 
 .receipt-preview-card {
@@ -82,7 +77,6 @@
     height: 320px;
     border-radius: 20px;
     background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     position: relative;
     overflow: visible;
@@ -118,19 +112,8 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     z-index: 10;
 }
+
 .remove-btn:hover {
     background: #e04343;
 }
-@keyframes pulse {
-    0% {
-        box-shadow: 0 30px 80px rgba(80, 25, 25, 0.25);
-    }
 
-    50% {
-        box-shadow: 0 40px 120px rgba(0, 0, 0, 0.35);
-    }
-
-    100% {
-        box-shadow: 0 30px 80px rgba(0, 0, 0, 0.25);
-    }
-}

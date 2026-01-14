@@ -1,13 +1,16 @@
 /* Fridge.css */
+
 * {
     box-sizing: border-box;
     font-family: "Inter", sans-serif;
 }
 
+
+
 body {
     margin: 0;
     /* Светлый градиент на фоне для эффекта глубины */
-    background: radial-gradient(circle at top right, #fdfbff, #efeef1);
+    background: radial-gradient(circle at top right, #ffffff, #ffffff);
     min-height: 100vh;
 }
 
@@ -23,15 +26,16 @@ body {
     display: flex;
     gap: 30px;
     align-items: flex-start;
+    margin: none;
 }
 
 /* КАРТОЧКА С ЭФФЕКТОМ СТЕКЛА */
 .card {
-    width: 440px;
+    width: 4400px;
     background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(12px);
+    /* backdrop-filter: blur(12px);
     /* Размытие фона под карточкой */
-    -webkit-backdrop-filter: blur(12px);
+    /* -webkit-backdrop-filter: blur(12px);  */
     margin-bottom: 60px;
     border-radius: 32px;
     padding: 52px;
@@ -162,7 +166,8 @@ body {
 
 
 .btn1 {
-    width: calc(115% - 40px); 
+    width: 100%;
+    /* width: calc(115% - 40px);  */
     height: auto;           
     margin-top: 10px;
     padding: 16px 32px;     
@@ -211,4 +216,6 @@ body {
     color: #999;
     text-align: center;
 }
+
+
 

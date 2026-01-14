@@ -6,8 +6,8 @@
 
 body {
     margin: 0;
-    /* Светлый градиент на фоне для эффекта глубины */
-    background: radial-gradient(circle at top right, #fdfbff, #efeef1);
+    
+    background: radial-gradient(circle at top right, #ffffff, #efeef1);
     min-height: 100vh;
 }
 

@@ -36,7 +36,7 @@ export default function Add() {
                     <div className="text">
                         {images.length >= 10 ? "Лимит достигнут" : "Добавить чек"}
                     </div>
-                    <div className="counter">{images.length} / 10</div>
+                    <div className="counter">{images.length}</div>
                 </div>
 
                 <div className="receipts-list">

@@ -1,5 +1,7 @@
 import React from 'react';
 import '../css/Resept.css'; 
+import { Link } from 'react-router-dom';
+
 
 export default function Resept() {
     return (
@@ -40,7 +42,7 @@ export default function Resept() {
                     </div>
 
                     <button className="btn" style={{ marginTop: '30px' }} onClick={() => window.history.back()}>
-                        ← Вернуться в холодильник
+                        <Link to="/fridge">← Вернуться в холодильник</Link>
                     </button>
                 </div>
             </div>
